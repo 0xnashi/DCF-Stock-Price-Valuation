@@ -39,7 +39,7 @@ def single_rate_DCF(args):
     Predict_price = final_cash / stock
     table.add_row(["Total Cash Flow", "${:.2f}".format(final_cash)])
     table.add_row(["Stock Amount", "{} 股".format(stock)])
-    table.add_row(["DCF估值", "${:.2f}".format(Predict_price)])
+    table.add_row(["DCF Valuation", "${:.2f}".format(Predict_price)])
     print(table)
     return Predict_price
 
@@ -48,7 +48,6 @@ def Inc_scale_DCF(args):
     if scale:
         bias = (scale - 1.0) / years
         pow_list = [1 + i * bias for i in range(1, years + 1)]
-        print(pow_list)
         yearlist = []
         for i in range(1,years+1):
             yearlist.append(i)
@@ -59,7 +58,7 @@ def Inc_scale_DCF(args):
     Predict_price = final_cash / stock
     table.add_row(["Total Cash Flow", "${:.2f}".format(final_cash)])
     table.add_row(["Stock Amount", "{} 股".format(stock)])
-    table.add_row(["DCF估值", "${:.2f}".format(Predict_price)])
+    table.add_row(["DCF Valuation", "${:.2f}".format(Predict_price)])
     print(table)
     return Predict_price
 
